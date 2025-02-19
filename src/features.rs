@@ -15,9 +15,6 @@ fn document(body: impl Renderable) -> impl Renderable {
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Chat Rust</title>
-            //temporary(will use bun)
-            <script src="https://unpkg.com/htmx.org@2.0.4"></script>
-            <script src="https://unpkg.com/htmx-ext-ws@2.0.1/ws.js"></script>
         </head>
         <body>
             {body}
