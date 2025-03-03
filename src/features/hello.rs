@@ -1,14 +1,14 @@
 use axum::response::IntoResponse;
-use hypertext::{html_elements, rsx, Renderable};
+use hypertext::{Renderable, html_elements, rsx};
 
 use super::document;
 
 pub async fn hello() -> impl IntoResponse {
     let body = rsx! {
         <div>
-            Hello!
+            Axum Template
         </div>
     };
 
-    document(body).render()
+    document(body, "Axum Template").render()
 }
