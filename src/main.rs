@@ -1,4 +1,4 @@
-use axum_template::settings::Settings;
+use {{crate_name}}::settings::Settings;
 use tracing_subscriber::{layer::SubscriberExt, util::SubscriberInitExt};
 
 #[tokio::main]
@@ -20,7 +20,7 @@ async fn main() -> anyhow::Result<()> {
 
     let settings = Settings::try_new()?;
 
-    axum_template::serve(settings).await?;
+    {{crate_name}}::serve(settings).await?;
 
     Ok(())
 }
