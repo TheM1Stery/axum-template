@@ -1,6 +1,6 @@
 use axum::{Router, routing::get};
 use hello::hello;
-use hypertext::{Renderable, html_elements, rsx_move};
+use hypertext::{Renderable, html_elements, rsx};
 mod hello;
 
 pub fn routes() -> Router {
@@ -8,7 +8,7 @@ pub fn routes() -> Router {
 }
 
 fn document(body: impl Renderable, title: &str) -> impl Renderable {
-    rsx_move! {
+    rsx! {
         <!doctype html>
         <html>
         <head>

@@ -11,8 +11,8 @@ tower = "0.5"
 tower-http = { version = "0.6", features = ["trace"] }
 tower-livereload = "0.9"
 listenfd = "1.0"
-config = "0.15.8"
-hypertext = { version = "0.8.0", features = ["axum", "htmx"] }
+config = "0.15"
+hypertext = { git = "https://github.com/vidhanio/hypertext", default-features = false,features = ["axum", "htmx", "rsx"] }
 
 # async
 tokio = { version = "1", features = ["full"] }
