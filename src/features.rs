@@ -1,14 +1,14 @@
 use axum::{Router, routing::get};
 use hello::hello;
-use hypertext::{Renderable, html_elements, rsx};
+use hypertext::{Renderable, html_elements, rsx_move};
 mod hello;
 
 pub fn routes() -> Router {
     Router::new().route("/", get(hello))
 }
 
-fn document(body: impl Renderable, title: &str) -> impl Renderable {
-    rsx! {
+fn document(body: &impl Renderable, title: &str) -> impl Renderable {
+    rsx_move! {
         <!doctype html>
         <html>
         <head>

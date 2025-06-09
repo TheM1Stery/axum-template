@@ -10,5 +10,5 @@ pub async fn hello() -> impl IntoResponse {
         </div>
     };
 
-    document(body, "Axum Template").render()
+    document(&body, "Axum Template").render()
 }
